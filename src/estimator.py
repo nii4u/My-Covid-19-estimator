@@ -40,8 +40,8 @@ def estimator(data):
   currentlyInfected["impact"]["casesForVentilatorsByRequestedTime"] = int(0.02 * currentlyInfected["impact"]["infectionsByRequestedTime"])
   currentlyInfected["severeImpact"]["casesForVentilatorsByRequestedTime"] = int(0.02 * currentlyInfected["severeImpact"]["infectionsByRequestedTime"])
 
-  currentlyInfected["impact"]["dollarsInFlight"] = int(currentlyInfected["impact"]["infectionsByRequestedTime"] * data['region']['avgDailyIncomePopulation']*data['region']['avgDailyIncomeInUSD']  * num_days)
-  currentlyInfected["severeImpact"]["dollarsInFlight"] = int(currentlyInfected["severeImpact"]["infectionsByRequestedTime"]  * data['region']['avgDailyIncomePopulation']*data['region']['avgDailyIncomeInUSD']  * num_days)
+  currentlyInfected["impact"]["dollarsInFlight"] = int(currentlyInfected["impact"]["infectionsByRequestedTime"] * data['region']['avgDailyIncomePopulation']*data['region']['avgDailyIncomeInUSD']  * 30)
+  currentlyInfected["severeImpact"]["dollarsInFlight"] = int(currentlyInfected["severeImpact"]["infectionsByRequestedTime"]  * data['region']['avgDailyIncomePopulation']*data['region']['avgDailyIncomeInUSD']  * 30)
 
 
 
