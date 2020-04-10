@@ -7,9 +7,9 @@ def estimator(data):
   if data['periodType']=='days':
       num_days = data['timeToElapse']
   elif data['periodType']=='weeks':
-      num_days = data['timeToEplapse'] * 7
+      num_days = data['timeToElapse'] * 7
   else:
-      num_days = data['timeToEplapse'] * 30
+      num_days = data['timeToElapse'] * 30
 
   factor = num_days//3
 
