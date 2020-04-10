@@ -1,3 +1,4 @@
+
 def estimator(data):
   currentlyInfected = {}
   currentlyInfected["data"] = data
@@ -22,8 +23,8 @@ def estimator(data):
   currentlyInfected["severeImpact"]["currentlyInfected"] = data["reportedCases"] * 50
   currentlyInfected["severeImpact"]["infectionsByRequestedTime"] = currentlyInfected["severeImpact"]["currentlyInfected"] * multiplier
   
-  infectionsByRequestedTime = 0.15 * (currentlyInfected["impact"]["infectionsByRequestedTime"] + currentlyInfected["severeImpact"]["infectionsByRequestedTime"])
-  currentlyInfected["severeCasesByRequestedTime"] = infectionsByRequestedTime
-  
-  currentlyInfected['hospitalBedsByRequestedTime'] = currentlyInfected['data']['totalHospitalBeds'] - currentlyInfected["severeCasesByRequestedTime"]
+  currentlyInfected["Impact"]["severeCasesByRequestedTime"] = 0.15 * currentlyInfected["impact"]["infectionsByRequestedTime"]
+  currentlyInfected["severeImpact"]["severeCasesByRequestedTime"] = 0.15 * currentlyInfected["severeImpact"]["infectionsByRequestedTime"]
+
+  currentlyInfected['data']['hospitalBedsByRequestedTime'] = currentlyInfected['data']['totalHospitalBeds'] - currentlyInfected["severeCasesByRequestedTime"]
 
