@@ -29,7 +29,7 @@ def estimator(data):
   currentlyInfected["impact"]["severeCasesByRequestedTime"] = 0.15 * currentlyInfected["impact"]["infectionsByRequestedTime"] 
   currentlyInfected["severeImpact"]["severeCasesByRequestedTime"] = 0.15 * currentlyInfected["severeImpact"]["infectionsByRequestedTime"] 
   
-  currentlyInfected["impact"]["hospitalBedsByRequestedTime"] = data['totalHospitalBeds']*0.35 - currentlyInfected["impact"]["severeCasesByRequestedTime"]
-  currentlyInfected["severeImpact"]["hospitalBedsByRequestedTime"] = data['totalHospitalBeds']*0.35 - currentlyInfected["severeImpact"]["severeCasesByRequestedTime"]
+  currentlyInfected["impact"]["hospitalBedsByRequestedTime"] = int(data['totalHospit)alBeds']*0.35 - currentlyInfected["impact"]["severeCasesByRequestedTime"])
+  currentlyInfected["severeImpact"]["hospitalBedsByRequestedTime"] = int(data['totalHospitalBeds']*0.35 - currentlyInfected["severeImpact"]["severeCasesByRequestedTime"])
   
   return currentlyInfected
