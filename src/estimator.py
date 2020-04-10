@@ -13,7 +13,7 @@ def estimator(data):
 
   factor = num_days//3
 
-  multiplier = 2** factor
+  multiplier = 2 ** factor
 
   
   currentlyInfected["impact"]["infectionsByRequestedTime"] = currentlyInfected["impact"]["currentlyInfected"] * multiplier
