@@ -11,23 +11,23 @@
     <h1>COVID-19 Estimator</h1>
     <form action="">
         <label for="population">Population :</label>
-        <input type="text" id="population" name="data-population"><br><br>
+        <input type="text" id="population" data-population><br><br>
         <label for="timeToElapse">Time To Elapse :</label>
-        <input type="text" id="timeToElapse" name="data-time-to-elapse"><br><br>
+        <input type="text" id="timeToElapse" data-time-to-elapse><br><br>
         <label for="reportedCases">Reported Cases :</label>
-        <input type="text" id="reportedCases" name="data-reported-cases"><br><br>
+        <input type="text" id="reportedCases" data-reported-cases><br><br>
         <label for="totalHospitalBeds">Total Hospital Beds :</label>
-        <input type="text" id="totalHospitalBeds" name="data-total-hospital-beds"><br><br>
+        <input type="text" id="totalHospitalBeds" data-total-hospital-beds><br><br>
         <label for="periodType">Period Type :</label>
 
-        <select id="periodType" name="data-period-type">
+        <select id="periodType" data-period-type>
             <option value="days">days</option>
             <option value="weeks">weeks</option>
             <option value="months">months</option>
         </select>
 
         <br><br>
-        <button type="submit" name="data-go-estimate">Submit</button>
+        <button type="submit" data-go-estimate>Submit</button>
     </form>
     <script>
         const form = document.querySelector('form')
