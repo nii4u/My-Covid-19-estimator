@@ -45,6 +45,4 @@ def estimator(data):
 
 
 
-
-
   return currentlyInfected
