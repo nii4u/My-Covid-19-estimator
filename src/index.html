@@ -13,19 +13,19 @@
         <h1>COVID-19 Estimator</h1>
         <form>
             <label for="population">Population :</label>
-            <input type="text" id="population" data-population><br><br>
+            <input type="number" id="population" data-population><br><br>
             <label for="timeToElapse">Time To Elapse :</label>
-            <input type="text" id="timeToElapse" data-time-to-elapse><br><br>
+            <input type="number" id="timeToElapse" data-time-to-elapse><br><br>
             <label for="reportedCases">Reported Cases :</label>
-            <input type="text" id="reportedCases" data-reported-cases><br><br>
+            <input type="number" id="reportedCases" data-reported-cases><br><br>
             <label for="totalHospitalBeds">Total Hospital Beds :</label>
-            <input type="text" id="totalHospitalBeds" data-total-hospital-beds><br><br>
+            <input type="number" id="totalHospitalBeds" data-total-hospital-beds><br><br>
             <label for="periodType">Period Type :</label>
             
             <select id="periodType" data-period-type>
-                <option value="days">days</option>
-                <option value="weeks">weeks</option>
-                <option value="months">months</option>
+                <option value="days">Days</option>
+                <option value="weeks">Weeks</option>
+                <option value="months">Months</option>
             </select>
             
             <br><br>
@@ -38,12 +38,14 @@
             event.preventDefault()
         })
 
-        const input = document.querySelectorAll('input')
-        input.addEventListener('change', event => {
-            event.preventDefault();
-            console.log(event);
-            //.setAttribute("class", "democlass");
-        })
+        const inputs = document.querySelectorAll('input,select')
+        inputs.forEach(input => input.addEventListener('change', event => {
+            el = event.target
+            Object.keys(el.dataset).forEach(function(key){
+                const attr = 'data-' + key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
+                el.setAttribute(attr, el.value);
+            });
+        }))
     </script>
 </body>
 </html>
