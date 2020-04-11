@@ -5,35 +5,44 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>COVID-19 Estimator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <meta name="Description" content="The assessment empowers me to attempt helping society and leaders prepare for the real rig problem of COVID-19, which is its impact on lives, health systems, supply chains, and the economy.">
 </head>
 <body>
-    <h1>COVID-19 Estimator</h1>
-    <form action="">
-        <label for="population">Population :</label>
-        <input type="text" id="population" data-population><br><br>
-        <label for="timeToElapse">Time To Elapse :</label>
-        <input type="text" id="timeToElapse" data-time-to-elapse><br><br>
-        <label for="reportedCases">Reported Cases :</label>
-        <input type="text" id="reportedCases" data-reported-cases><br><br>
-        <label for="totalHospitalBeds">Total Hospital Beds :</label>
-        <input type="text" id="totalHospitalBeds" data-total-hospital-beds><br><br>
-        <label for="periodType">Period Type :</label>
-
-        <select id="periodType" data-period-type>
-            <option value="days">days</option>
-            <option value="weeks">weeks</option>
-            <option value="months">months</option>
-        </select>
-
-        <br><br>
-        <button type="submit" data-go-estimate>Submit</button>
-    </form>
+    <div class="form">
+        <h1>COVID-19 Estimator</h1>
+        <form>
+            <label for="population">Population :</label>
+            <input type="text" id="population" data-population><br><br>
+            <label for="timeToElapse">Time To Elapse :</label>
+            <input type="text" id="timeToElapse" data-time-to-elapse><br><br>
+            <label for="reportedCases">Reported Cases :</label>
+            <input type="text" id="reportedCases" data-reported-cases><br><br>
+            <label for="totalHospitalBeds">Total Hospital Beds :</label>
+            <input type="text" id="totalHospitalBeds" data-total-hospital-beds><br><br>
+            <label for="periodType">Period Type :</label>
+            
+            <select id="periodType" data-period-type>
+                <option value="days">days</option>
+                <option value="weeks">weeks</option>
+                <option value="months">months</option>
+            </select>
+            
+            <br><br>
+            <button type="submit" data-go-estimate>Submit</button>
+        </form>
+    </div>
     <script>
         const form = document.querySelector('form')
         form.addEventListener('submit', event => {
-            // submit event detected
             event.preventDefault()
+        })
+
+        const input = document.querySelectorAll('input')
+        input.addEventListener('change', event => {
+            event.preventDefault();
+            console.log(event);
+            //.setAttribute("class", "democlass");
         })
     </script>
 </body>
