@@ -5,7 +5,7 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>COVID-19 Estimator</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css' aria-disabled="true">
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
     <meta name="Description" content="The assessment empowers me to attempt helping society and leaders prepare for the real rig problem of COVID-19, which is its impact on lives, health systems, supply chains, and the economy.">
 </head>
 <body>
@@ -32,20 +32,5 @@
             <button type="submit" data-go-estimate>Submit</button>
         </form>
     </div>
-    <script>
-        const form = document.querySelector('form')
-        form.addEventListener('submit', event => {
-            event.preventDefault()
-        })
-
-        const inputs = document.querySelectorAll('input,select')
-        inputs.forEach(input => input.addEventListener('change', event => {
-            el = event.target
-            Object.keys(el.dataset).forEach(function(key){
-                const attr = 'data-' + key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
-                el.setAttribute(attr, el.value);
-            });
-        }))
-    </script>
 </body>
 </html>
