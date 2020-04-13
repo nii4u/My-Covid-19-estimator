@@ -44,7 +44,7 @@
         Object.keys(el.dataset).forEach(function(key){
         const attr = 'data-' + key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase()
         el.setAttribute(attr, el.value);
-        }).removeAttribute('disabled');
+        });
         }))
         </script>
 
